@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,19 +18,20 @@ body {
     display:flex;
     justify-content:center;
     align-items:center;
-    overflow:hidden;
 }
+
 
 .card {
     width:330px;
     background:#0d0d0d;
-    border:1px solid #600000;
+    border:1px solid #700000;
     border-radius:22px;
     padding:30px;
     text-align:center;
-    box-shadow:0 0 50px rgba(130,0,0,.5);
-    animation:fade 2s ease;
+    box-shadow:0 0 50px rgba(150,0,0,.5);
+    animation:fade 2s;
 }
+
 
 .floppy {
     width:130px;
@@ -39,122 +41,163 @@ body {
     border:3px solid #a00000;
     border-radius:15px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     font-size:55px;
-    animation:pulse 2s infinite;
+    animation:glow 2s infinite;
 }
+
 
 h1 {
     color:#ff4040;
-    margin-bottom:10px;
 }
+
 
 .memory {
     color:#ccc;
-    font-size:16px;
-    animation:slide 2s ease;
+    line-height:1.6;
 }
 
+
 button {
+
     margin-top:25px;
     padding:13px 30px;
     border:none;
     border-radius:30px;
-    background:#8b0000;
+    background:#900000;
     color:white;
-    font-size:15px;
+    font-size:16px;
 }
+
+
+button:active {
+    transform:scale(.95);
+}
+
+
 
 @keyframes fade {
-    from {
-        opacity:0;
-        transform:scale(.8);
-    }
-    to {
-        opacity:1;
-        transform:scale(1);
-    }
+
+from {
+opacity:0;
+transform:scale(.8);
 }
 
-@keyframes pulse {
-    0%,100% {
-        box-shadow:0 0 10px #700000;
-    }
-    50% {
-        box-shadow:0 0 35px #ff0000;
-    }
+to {
+opacity:1;
+transform:scale(1);
 }
 
-@keyframes slide {
-    from {
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to {
-        opacity:1;
-        transform:translateY(0);
-    }
+}
+
+
+
+@keyframes glow {
+
+0%,100% {
+box-shadow:0 0 10px #700000;
+}
+
+50% {
+box-shadow:0 0 35px red;
+}
+
 }
 
 </style>
 
 </head>
 
-<script>
-function openMemory(){
-    document.querySelector(".card").innerHTML = `
-    <h1>Our Memory</h1>
 
-    <div class="memory">
-    512 days ago,<br>
-    a little story started ❤️
-    </div>
 
-    <br>
-
-    <div style="
-    height:120px;
-    border:1px dashed #8b0000;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#777;">
-    Photo will be here 📷
-    </div>
-
-    <p>
-    Kanye West — Runaway
-    </p>
-    `;
-}
-</script>
-    
 <body>
 
-<div class="card">
+
+<div class="card" id="card">
+
 
 <div class="floppy">
 💾
 </div>
 
-<h1>Paniz</h1>
+
+<h1>
+Paniz
+</h1>
+
 
 <div class="memory">
 512 days ago,<br>
 a memory started...
 </div>
 
+
 <p>
 Kanye West — Runaway
 </p>
+
 
 <button onclick="openMemory()">
 Open Memory
 </button>
 
+
 </div>
 
+
+
+<script>
+
+function openMemory(){
+
+document.getElementById("card").innerHTML = `
+
+
+<h1>
+Our Memory ❤️
+</h1>
+
+
+<div class="memory">
+
+512 days ago,<br>
+a little story started...
+
+</div>
+
+
+<br>
+
+
+<div style="
+height:140px;
+border:1px dashed #900;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#777;
+">
+
+Photo will be here 📷
+
+</div>
+
+
+<p>
+Kanye West — Runaway
+</p>
+
+
+`;
+
+}
+
+
+</script>
+
+
 </body>
+
 </html>
