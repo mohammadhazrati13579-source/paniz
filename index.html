@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Paniz Memory</title>
+
 
 <style>
 
@@ -22,6 +24,7 @@ body {
 
 
 .card {
+
     width:330px;
     background:#0d0d0d;
     border:1px solid #700000;
@@ -30,32 +33,42 @@ body {
     text-align:center;
     box-shadow:0 0 50px rgba(150,0,0,.5);
     animation:fade 2s;
+
 }
 
 
 .floppy {
+
     width:130px;
     height:130px;
     margin:auto;
     background:#111;
     border:3px solid #a00000;
     border-radius:15px;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     font-size:55px;
+
     animation:glow 2s infinite;
+
 }
 
 
 h1 {
+
     color:#ff4040;
+
 }
 
 
 .memory {
+
     color:#ccc;
     line-height:1.6;
+
 }
 
 
@@ -65,14 +78,36 @@ button {
     padding:13px 30px;
     border:none;
     border-radius:30px;
+
     background:#900000;
     color:white;
+
     font-size:16px;
+
 }
 
 
-button:active {
-    transform:scale(.95);
+.gallery {
+
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+
+}
+
+
+.gallery img {
+
+    width:90px;
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:1px solid #900;
+
 }
 
 
@@ -80,13 +115,18 @@ button:active {
 @keyframes fade {
 
 from {
+
 opacity:0;
 transform:scale(.8);
+
 }
 
+
 to {
+
 opacity:1;
 transform:scale(1);
+
 }
 
 }
@@ -95,17 +135,26 @@ transform:scale(1);
 
 @keyframes glow {
 
+
 0%,100% {
+
 box-shadow:0 0 10px #700000;
+
 }
+
 
 50% {
+
 box-shadow:0 0 35px red;
-}
 
 }
+
+
+}
+
 
 </style>
+
 
 </head>
 
@@ -114,49 +163,72 @@ box-shadow:0 0 35px red;
 <body>
 
 
+
 <div class="card" id="card">
 
 
 <div class="floppy">
+
 💾
+
 </div>
+
 
 
 <h1>
+
 Paniz
+
 </h1>
 
 
+
 <div class="memory">
+
 512 days ago,<br>
 a memory started...
+
 </div>
+
 
 
 <p>
+
 Kanye West — Runaway
+
 </p>
 
 
+
 <button onclick="openMemory()">
+
 Open Memory
+
 </button>
 
 
+
 </div>
+
+
 
 
 
 <script>
 
+
 function openMemory(){
+
 
 document.getElementById("card").innerHTML = `
 
 
 <h1>
+
 Our Memory ❤️
+
 </h1>
+
 
 
 <div class="memory">
@@ -167,31 +239,42 @@ a little story started...
 </div>
 
 
+
 <br>
+
 
 
 <div class="gallery">
 
-<img src="https://via.placeholder.com/150" alt="memory">
 
-<img src="https://via.placeholder.com/150" alt="memory">
+<img src="https://via.placeholder.com/150">
 
-<img src="https://via.placeholder.com/150" alt="memory">
+<img src="https://via.placeholder.com/150">
+
+<img src="https://via.placeholder.com/150">
+
 
 </div>
 
 
+
 <p>
+
 Kanye West — Runaway
+
 </p>
+
 
 
 `;
 
+
 }
 
 
+
 </script>
+
 
 
 </body>
