@@ -101,6 +101,36 @@ button {
 
 </head>
 
+<script>
+function openMemory(){
+    document.querySelector(".card").innerHTML = `
+    <h1>Our Memory</h1>
+
+    <div class="memory">
+    512 days ago,<br>
+    a little story started ❤️
+    </div>
+
+    <br>
+
+    <div style="
+    height:120px;
+    border:1px dashed #8b0000;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;">
+    Photo will be here 📷
+    </div>
+
+    <p>
+    Kanye West — Runaway
+    </p>
+    `;
+}
+</script>
+    
 <body>
 
 <div class="card">
@@ -120,7 +150,7 @@ a memory started...
 Kanye West — Runaway
 </p>
 
-<button>
+<button onclick="openMemory()">
 Open Memory
 </button>
 
